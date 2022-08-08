@@ -8,16 +8,27 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Welcome to the Filecoin Green Storage Providers Reporting Portal!
-        
         </p>
-        <a
+        <p>
+          Learn more about the <a
           className="App-link"
           href="https://green.filecoin.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more about Filecoin Green!
+          Green Guidance! 
         </a>
+        </p>
+        <p>
+        Learn more about <a
+          className="App-link"
+          href="https://green.filecoin.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        Filecoin Green!
+        </a>
+        </p>
       </header>
     </div>
   );
