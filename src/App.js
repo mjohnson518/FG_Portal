@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more about Filecoin Green
+          Learn more about Filecoin Green!
         </a>
       </header>
     </div>
