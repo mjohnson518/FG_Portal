@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './filecoin-fil-logo.webp';
 import './App.css';
 
 function App() {
