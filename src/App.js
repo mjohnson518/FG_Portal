@@ -15,9 +15,9 @@ function App() {
           href="https://green.filecoin.io"
           target="_blank"
           rel="noopener noreferrer"
-        >
+        ><b>
           Green Guidance! 
-        </a>
+          </b></a>
         </p>
         <p>
         Learn more about <a
@@ -25,9 +25,9 @@ function App() {
           href="https://green.filecoin.io"
           target="_blank"
           rel="noopener noreferrer"
-        >
+        ><b>
         Filecoin Green!
-        </a>
+        </b></a>
         </p>
       </header>
     </div>
