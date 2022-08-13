@@ -1,5 +1,7 @@
 import logo from './filecoin-fil-logo.webp';
 import './App.css';
+import * as React from 'react';
+
 
 function App() {
   return (
@@ -9,16 +11,11 @@ function App() {
         <p>
           Welcome to the Filecoin Green Storage Providers Reporting Portal!
         </p>
-        <p>
-          Learn more about the <a
-          className="App-link"
-          href="https://green.filecoin.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        ><b>
-          Green Guidance! 
-          </b></a>
-        </p>
+        <br></br>
+        <div>
+          <button variant="contained" className="Button" type="button"><b>ENTER</b></button>
+        </div>
+        <br></br>
         <p>
         Learn more about <a
           className="App-link"
@@ -26,12 +23,13 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         ><b>
-        Filecoin Green!
-        </b></a>
+        Filecoin Green
+        </b></a>.
         </p>
       </header>
     </div>
   );
+  
 }
 
 export default App;

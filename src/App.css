@@ -29,6 +29,30 @@
 .App-link {
   color: #2776ec;
 }
+.Button {
+  background-color: #2776ec;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid #000000;
+  box-shadow: 0 1px #999;
+  transition-duration: 0.4s;
+}
+
+.Button:hover {
+  background-color: #4cadaf; /* Green */
+  color: white;
+}
+
+.Button:active {
+  background-color: #4cadaf;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
 
 @keyframes App-logo-spin {
   from {
