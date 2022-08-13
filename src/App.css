@@ -44,12 +44,12 @@
 }
 
 .Button:hover {
-  background-color: #4cadaf; /* Green */
+  background-color: #1dbbbd; 
   color: white;
 }
 
 .Button:active {
-  background-color: #4cadaf;
+  background-color: #1dbbbd;
   box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
