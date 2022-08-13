@@ -24,6 +24,13 @@ function App() {
           rel="noopener noreferrer"
         ><b>
         Filecoin Green
+        </b></a> and the <a
+          className="App-link"
+          href="https://filecoin-green.gitbook.io/filecoin-green-documentation/"
+          target="_blank"
+          rel="noopener noreferrer"
+        ><b>
+        Green Guidance
         </b></a>.
         </p>
       </header>
