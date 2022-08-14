@@ -13,7 +13,7 @@ function App() {
         </p>
         <br></br>
         <div>
-          <button variant="contained" className="Button" type="button"><b>ENTER</b></button>
+          <a href="./index"><button variant="contained" className="Button" type="button"><b>ENTER</b></button></a>
         </div>
         <br></br>
         <p>

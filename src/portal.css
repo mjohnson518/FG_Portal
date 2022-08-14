@@ -1,0 +1,66 @@
+.Portal {
+    text-align: center;
+    color: #000000;
+  }
+  
+  .Portal-logo {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Portal-logo {
+      animation: 
+      App-logo-spin infinite 3.5s;
+      
+    }
+  }
+  
+  .Portal-header {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #2776ec;
+  }
+  .Button {
+    background-color: #2776ec;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #000000;
+    box-shadow: 0 1px #999;
+    transition-duration: 0.4s;
+  }
+  
+  .Button:hover {
+    background-color: #1dbbbd; 
+    color: white;
+  }
+  
+  .Button:active {
+    background-color: #1dbbbd;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
