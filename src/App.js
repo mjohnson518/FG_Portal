@@ -1,42 +1,37 @@
-import logo from './filecoin-fil-logo.webp';
-import './App.css';
 import * as React from 'react';
-
+import './App.css';
+import { NavLink, Routes, Route } from "react-router-dom"
+import Portal from "./Portal"
+import About from "./About"
+import Main from "./Main"
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" /> 
-        <p>
-          Welcome to the Filecoin Green Storage Providers Reporting Portal!
-        </p>
-        <br></br>
+      <Navbar expand="lg" variant="light" bg="light">
+       <Container className="NavBar">
+          <Nav>
+            <NavLink to="/" className="NavItem"><b>Home</b></NavLink> 
+            <NavLink to="/About" className="NavItem"><b>About</b></NavLink> 
+            <NavLink to="/Portal" className="NavItem"><b>Portal</b></NavLink> 
+          </Nav>
+        </Container>
+      </Navbar>
         <div>
-          <a href="./index"><button variant="contained" className="Button" type="button"><b>ENTER</b></button></a>
-        </div>
-        <br></br>
-        <p>
-        Learn more about <a
-          className="App-link"
-          href="https://green.filecoin.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        ><b>
-        Filecoin Green
-        </b></a> and the <a
-          className="App-link"
-          href="https://filecoin-green.gitbook.io/filecoin-green-documentation/"
-          target="_blank"
-          rel="noopener noreferrer"
-        ><b>
-        Green Guidance
-        </b></a>.
-        </p>
-      </header>
+            <Routes>
+              <Route exact path="/" element={<Main/>}/>
+              <Route path="/About" element={ <About/> } />
+              <Route path="/Portal" element={ <Portal/> } />
+            </Routes>
+      </div> 
     </div>
+   
   );
   
 }
 
 export default App;
+
