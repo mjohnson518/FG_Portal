@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Filecoin Green Storage Providers Reporting Portal
 
 As stated in the [Storage Providers Green Guidance Documentation](https://filecoin-green.gitbook.io/filecoin-green-documentation/), Filecoin Green is working on a comprehensive auditing process for all activity data, allowing SPs interested in making strong [sustainability claims](https://filecoin-green.gitbook.io/filecoin-green-documentation/readme-1/storage-providers-tiered-sustainability-claims) to publicly verify the associated data. We are building a [Reporting Portal](https://filecoin-green.gitbook.io/filecoin-green-documentation/readme-1/additional-resources/annex-3-filecoin-green-reporting-portal), which is an upload utility to PANDO that enables easy uploading of all relevant data to substantiate the configuration and performance of SPs operations.
@@ -51,3 +52,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+# FG_Portal
+>>>>>>> b8f65277e983f4a7c7b4a560ae66956ed5d22f56
