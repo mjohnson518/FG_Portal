@@ -10,9 +10,7 @@ function Main() {
             <div>
                 <p>Welcome to the Filecoin Green Storage Providers Reporting Portal!</p>
             </div>
-           /* <div>
-                <a href="/About"><button variant="contained" className="Button" type="button"><b>ENTER</b></button></a>
-            </div> */
+          
         </header>
     </div>
 );
