@@ -8,10 +8,16 @@
   pointer-events: none;
 }
 
+.Content {
+  text-align: center;
+  align-items: center;
+  max-width: 85vw;
+}
+
 .NavBar {
   padding: 2px;
   color: #ffffff;
-  background: linear-gradient(0.25turn, #4CF087, #1B77F8);
+  background: linear-gradient(0.25turn, #4CF087, #34B4C1, #1B77F8);
   height: 10%;
   text-align: right;
   padding-right: 10px;
@@ -79,7 +85,7 @@
   justify-content: center;
   align-items: center;
   margin: 5rem auto;
-  max-width: 55vw;
+  max-width: 65vw;
   min-height: 55vh;
   font-size: calc(10px + 1vmin);
   color: #CBD5E0;
