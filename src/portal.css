@@ -1,12 +1,70 @@
-.Portal {
+
+  .description-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #000000;
+    font-size: calc(10px + 1.5vmin);
+    padding: 2rem 0 0 0;
+    margin: 0 0rem 0 0rem;
+    color: white;
+    font-weight: bold;
+  }
+  .description-text-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(10px + 0.5vmin);
+    color: white;
+    font-weight: bold;
+  }
+
+  .Portal-box {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    border-color: #182523;
+    background-color: #171923;
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: left;
+    margin: 2rem auto;
+    max-width: 65vw;
+    height: 500px;
+    min-height: 55vh;
+    font-size: calc(10px + 1vmin);
+    color: #CBD5E0;
+    overflow: auto;
+    
   }
   
-  .Portal-logo {
-    height: 20vmin;
-    pointer-events: none;
+  .Portal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    font-size: calc(10px + 0.75vmin);
+    padding: 0.5rem;
+    margin: 0 0.75rem 0 0.75rem;
+    max-width: 35vw;
+    color: white;
+    font-weight: bold;
   }
+  
+  .form-input {
+    margin: 0.5rem 0 0.5rem 0;
+    border: 1px solid #171923;
+    border-radius: 8px;
+    padding: 0.25rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  }
+
+ 
   
   @media (prefers-reduced-motion: no-preference) {
     .Portal-logo {
@@ -15,46 +73,7 @@
       
     }
   }
-  
-  .Portal-header {
-    background-color: #000000;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #2776ec;
-  }
-  .Button {
-    background-color: #2776ec;
-    color: #ffffff;
-    border-radius: 25px;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: 2px solid #000000;
-    box-shadow: 0 1px #999;
-    transition-duration: 0.4s;
-  }
-  
-  .Button:hover {
-    background-color: #1dbbbd; 
-    color: white;
-  }
-  
-  .Button:active {
-    background-color: #1dbbbd;
-    box-shadow: 0 1px #666;
-    transform: translateY(4px);
-  }
-  
+
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);

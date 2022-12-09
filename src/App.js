@@ -4,6 +4,7 @@ import { NavLink, Routes, Route } from "react-router-dom"
 import Portal from "./Portal"
 import About from "./About"
 import Main from "./Main"
+import PG from "./PG"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -17,6 +18,7 @@ function App() {
             <NavLink to="/" className="NavItem"><b>Home</b></NavLink> 
             <NavLink to="/About" className="NavItem"><b>About</b></NavLink> 
             <NavLink to="/Portal" className="NavItem"><b>Portal</b></NavLink> 
+            <NavLink to="/PG" className="NavItem"><b>PG</b></NavLink>
           </Nav>
         </Container>
       </Navbar>
@@ -25,6 +27,7 @@ function App() {
               <Route exact path="/" element={<Main/>}/>
               <Route path="/About" element={ <About/> } />
               <Route path="/Portal" element={ <Portal/> } />
+              <Route path="/PG" element={ <PG/> } />
             </Routes>
       </div> 
     </div>

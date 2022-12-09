@@ -48,9 +48,10 @@
 .App-link {
   color: green;
 }
+
 .Button {
   margin: 10px;
-  background-color: #114000;
+  background-color: #185801;
   color: #ffffff;
   border-radius: 25px;
   padding: 10px 24px;
@@ -61,6 +62,7 @@
   border: 2px solid #000000;
   box-shadow: 0 1px #999;
   transition-duration: 0.4s;
+  font-weight: bold;
 }
 
 .Button:hover {
@@ -75,7 +77,7 @@
 }
 
 .Box {
-  padding: 30px;
+  padding: 1.5rem 1rem 1.5rem 1rem;
   border-color: #182523;
   background-color: #171923;
   display: flex;
@@ -85,7 +87,7 @@
   justify-content: center;
   align-items: center;
   margin: 5rem auto;
-  max-width: 75vw;
+  max-width: 65vw;
   min-height: 55vh;
   font-size: calc(10px + 1vmin);
   color: #CBD5E0;
