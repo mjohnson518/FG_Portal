@@ -8,7 +8,7 @@ function PortalForm() {
   
   const handleSubmit = (event) => {
     // Prevent the default behavior of the button
-    event.preventDefault();
+    // event.preventDefault();
   
     // Prevent the page from being refreshed when the button is clicked
     event.currentTarget.submit();
