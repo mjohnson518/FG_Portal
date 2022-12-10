@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+//, { useState, useEffect }
+//import axios from 'axios';
 import './portal.css';
 import { Form , Button, InputGroup } from 'react-bootstrap';
-import { NavLink, Routes, Route } from "react-router-dom"
+//import { NavLink, Routes, Route } from "react-router-dom"
 
 function PG() {
     const handleSubmit = (event) => {
