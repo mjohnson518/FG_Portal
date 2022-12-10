@@ -24,7 +24,7 @@ function PG() {
           // ... */
       
         // Once the file has been processed, you can update the URL to redirect the user to the new page
-        window.location.href = '/About';
+        window.location.href = '.src/About';
       }
 
   return (
