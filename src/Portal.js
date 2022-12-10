@@ -35,7 +35,7 @@ function PortalForm() {
           <p className="description-text"> Please submit your information below: </p>
       </div>
     <div className="Portal-box">
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Form.Group className="Portal-text" controlId="formBasicEmail">
         <Form.Label>Storage Provider Name: </Form.Label>
         <Form.Control className="form-input" type="text" placeholder="Enter SP Name" />
@@ -91,11 +91,11 @@ function PortalForm() {
       <Form.Group className="Portal-text" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-      <Form.Group onSubmit={handleSubmit}>
+      
         <Button className="Button" variant="primary" type="submit">
           Next
         </Button>
-      </Form.Group>
+      
     </Form>
     </div>
     </div>

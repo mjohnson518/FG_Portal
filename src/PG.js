@@ -9,11 +9,8 @@ function PG() {
         // Prevent the default behavior of the button
          event.preventDefault();
       
-         // Get the form element
-         const form = event.target;
-
-        // Submit the form
-        form.submit();
+        /// Prevent the page from being refreshed when the button is clicked
+        event.currentTarget.submit();
       
         /*  // Get the input element that contains the file(s)
         const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
@@ -36,7 +33,7 @@ function PG() {
           <p className="description-text"> Please submit your information below: </p>
       </div>
     <div className="Portal-box">
-    <Form>
+    <Form onClick={handleSubmit}>
       <Form.Group className="Portal-text" controlId="formBasicEmail">
         <Form.Label>IP Addresses: </Form.Label>
         <Form.Control className="form-input" type="text" placeholder="Enter IPs (seperated by commas)" />
@@ -60,7 +57,7 @@ function PG() {
           <Form.Control className="form-input" type="file" accept=".pdf, .doc, .docx, .png, .jpeg" multiple />
         </InputGroup>
       </Form.Group>
-      <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
+      <Button className="Button" variant="primary" type="submit">
           Next
       </Button>
     </Form> 
