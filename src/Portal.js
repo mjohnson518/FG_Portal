@@ -10,7 +10,10 @@ function PortalForm() {
     // Prevent the default behavior of the button
     event.preventDefault();
   
-   /*  // Get the input element that contains the file(s)
+    // Prevent the page from being refreshed when the button is clicked
+    event.currentTarget.submit();
+  
+    /*  // Get the input element that contains the file(s)
     const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
     // Get the selected files
     const files = fileInput.files;
@@ -21,9 +24,9 @@ function PortalForm() {
       // Do something with the file (e.g. upload it to a server)
       // ... */
   
-      // Once the file has been processed, you can update the URL to redirect the user to the new page
-      window.location.href = '/PG';
-    }
+    // Once the file has been processed, you can update the URL to redirect the user to the new page
+    window.location.href = '/PG';
+  }
   //}
 
   return (

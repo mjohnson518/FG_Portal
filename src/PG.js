@@ -5,24 +5,27 @@ import { Form , Button, InputGroup } from 'react-bootstrap';
 import { NavLink, Routes, Route } from "react-router-dom"
 
 function PG() {
-  const handleSubmit = (event) => {
-    // Prevent the default behavior of the button
-    event.preventDefault();
-  
-   /*  // Get the input element that contains the file(s)
-    const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
-    // Get the selected files
-    const files = fileInput.files;
-  
-    // Process the selected files in some way (e.g. upload them to a server, or save them to a database)
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      // Do something with the file (e.g. upload it to a server)
-      // ... */
-  
-      // Once the file has been processed, you can update the URL to redirect the user to the new page
-      window.location.href = "/About";
-    }
+    const handleSubmit = (event) => {
+        // Prevent the default behavior of the button
+        event.preventDefault();
+      
+        // Prevent the page from being refreshed when the button is clicked
+        event.currentTarget.submit();
+      
+        /*  // Get the input element that contains the file(s)
+        const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
+        // Get the selected files
+        const files = fileInput.files;
+      
+        // Process the selected files in some way (e.g. upload them to a server, or save them to a database)
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          // Do something with the file (e.g. upload it to a server)
+          // ... */
+      
+        // Once the file has been processed, you can update the URL to redirect the user to the new page
+        window.location.href = '/About';
+      }
 
   return (
     <div>
