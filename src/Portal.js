@@ -10,11 +10,8 @@ function PortalForm() {
     // Prevent the default behavior of the button
      event.preventDefault();
   
-    // Get the form element
-    const form = event.target;
-
-    // Submit the form
-    form.submit();
+    /// Prevent the page from being refreshed when the button is clicked
+    event.currentTarget.submit();
   
     /*  // Get the input element that contains the file(s)
     const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
@@ -94,11 +91,12 @@ function PortalForm() {
       <Form.Group className="Portal-text" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
-
-        <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
+      <Form.Group onSubmit={handleSubmit}>
+        <Button className="Button" variant="primary" type="submit">
           Next
         </Button>
-      </Form>
+      </Form.Group>
+    </Form>
     </div>
     </div>
   );
