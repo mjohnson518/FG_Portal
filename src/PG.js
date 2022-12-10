@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './portal.css';
 import { Form , Button, InputGroup } from 'react-bootstrap';
+import { NavLink, Routes, Route } from "react-router-dom"
 
 function PG() {
   const handleSubmit = (event) => {
@@ -20,7 +21,7 @@ function PG() {
       // ... */
   
       // Once the file has been processed, you can update the URL to redirect the user to the new page
-      window.location.href = '/About';
+      window.location.href = "/About";
     }
 
   return (
