@@ -8,10 +8,13 @@ function PortalForm() {
   
   const handleSubmit = (event) => {
     // Prevent the default behavior of the button
-    // event.preventDefault();
+     event.preventDefault();
   
-    // Prevent the page from being refreshed when the button is clicked
-    event.currentTarget.submit();
+    // Get the form element
+    const form = event.target;
+
+    // Submit the form
+    form.submit();
   
     /*  // Get the input element that contains the file(s)
     const fileInput = event.target.querySelector('#formDocumentUpload input[type="file"]');
