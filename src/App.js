@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import './App.css';
 import { NavLink, Routes, Route } from "react-router-dom"
 import Portal from "./Portal"
@@ -29,12 +29,11 @@ function App() {
               <Route path="/Portal" element={ <Portal/> } />
               <Route path="/PG" element={ <PG/> } />
             </Routes>
-      </div> 
+        </div> 
     </div>
    
   );
-  
 }
 
-export default App;
+export default App; 
 
