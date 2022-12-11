@@ -20,12 +20,12 @@ app.listen(3001, () => {
 
 // Set up a new database connection pool
 const pool = new Pool({
-    host: 'portal-database.cluster-cmscrwhbjsll.us-east-1.rds.amazonaws.com', // Replace with the hostname of your database
-    database: 'portal-database', // Replace with the name of your database
-    user: 'mjportalpg', // Replace with the username of a user with access to the database
-    password: 'Reporting-portal0099', // Replace with the password of a user with access to the database
-    port: 5432, // Replace with the port of your database
-  });
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    port: process.env.PORT,
+});
 
 // Define a route for the POST method at http://localhost:3000/
 app.post('/', (req, res) => {
