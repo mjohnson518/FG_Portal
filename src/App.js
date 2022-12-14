@@ -18,7 +18,7 @@ function App() {
             <NavLink to="/" className="NavItem"><b>Home</b></NavLink> 
             <NavLink to="/About" className="NavItem"><b>About</b></NavLink> 
             <NavLink to="/Portal" className="NavItem"><b>Portal</b></NavLink> 
-            <NavLink to="/PG" className="NavItem"><b>PG</b></NavLink>
+            <NavLink to="/PG" className="NavItem"><b>P2</b></NavLink>
           </Nav>
         </Container>
       </Navbar>
