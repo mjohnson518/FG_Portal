@@ -9,7 +9,7 @@ function About() {
         <Container className='Box'>
             <div>
                 <p>
-                <b>The Reporting Portal is currently under construction.</b>
+                <b>The Reporting Portal is currently <span className='highlight-green'>under construction</span>.</b>
                 </p>
             </div>
             <div>

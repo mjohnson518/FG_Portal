@@ -53,7 +53,7 @@ function PortalForm() {
           name="spName"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -68,7 +68,7 @@ function PortalForm() {
           name="country"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -83,7 +83,7 @@ function PortalForm() {
           name="state"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -98,7 +98,7 @@ function PortalForm() {
           name="city"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -113,7 +113,7 @@ function PortalForm() {
           name="address"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -128,7 +128,7 @@ function PortalForm() {
           name="zip"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -143,7 +143,7 @@ function PortalForm() {
           name="email"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -158,7 +158,7 @@ function PortalForm() {
           name="password"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -173,7 +173,7 @@ function PortalForm() {
           name="minerIds"
           autoComplete="off"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}
@@ -190,7 +190,7 @@ function PortalForm() {
             name="upload"
             autoComplete="off"
             {...register("message", {
-              required: "Required",
+              required: <span className="required-text">Required</span>,
             })}
           />
           </InputGroup>
@@ -204,7 +204,7 @@ function PortalForm() {
           label="Check me out"
           name="checkbox"
           {...register("message", {
-            required: "Required",
+            required: <span className="required-text">Required</span>,
           })}
         />
         {errors.message && errors.message.message}

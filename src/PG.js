@@ -51,7 +51,7 @@ function PG() {
               name="ipAddresses"
               autoComplete="off"
               {...register("message", {
-                required: "Required",
+                required: <span className="required-text">Required</span>,
               })}
             />
             {errors.message && errors.message.message}
@@ -66,7 +66,7 @@ function PG() {
               name="utilityProvider"
               autoComplete="off"
               {...register("message", {
-                  required: "Required",
+                  required: <span className="required-text">Required</span>,
               })}
               />
               {errors.message && errors.message.message}
@@ -80,7 +80,7 @@ function PG() {
               placeholder="Enter Ref/Bill #"
               name="referenceNumber"
               {...register("message", {
-                required: "Required",
+                required: <span className="required-text">Required</span>,
               })}
               />
               {errors.message && errors.message.message}
@@ -94,7 +94,7 @@ function PG() {
               placeholder="Enter Estimated Annual Use (kWh)"
               name="estimatedUsage"
               {...register("message", {
-                required: "Required",
+                required: <span className="required-text">Required</span>,
               })}
               />
               {errors.message && errors.message.message}
@@ -110,7 +110,7 @@ function PG() {
                 multiple
                 name="bills"
                 {...register("message", {
-                    required: "Required",
+                    required: <span className="required-text">Required</span>,
                   })}
                 />
                 </InputGroup>

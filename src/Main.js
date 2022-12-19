@@ -8,7 +8,7 @@ function Main() {
         <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" /> 
             <div  className='Content'>
-                <p><b>Welcome to the Filecoin Green Reporting Portal!</b></p>
+                <p><b>Welcome to the <span className='highlight-green'>Filecoin Green</span> Reporting Portal!</b></p>
             </div>
             <div className='Content'>
                 <p><small>
