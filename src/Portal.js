@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
 import './portal.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 function PortalForm() {
   // Import the useNavigate hook from the react-router-dom library
@@ -180,7 +182,18 @@ function PortalForm() {
       </Form.Group>
 
       <Form.Group className="Portal-text" controlId="formDocumentUpload">
-        <Form.Label>Upload:</Form.Label>
+        <Form.Label
+          title="Please upload the most recent three (3) months of utility bills."
+          onMouseEnter={(event) => {
+            event.target.style.backgroundColor = "grey";
+          }}
+          onMouseLeave={(event) => {
+            event.target.style.backgroundColor = "";
+          }}
+          className="info-box"
+        >
+          Upload Utility Bills <FontAwesomeIcon icon={faInfoCircle} />
+        </Form.Label>
         <InputGroup>
           <Form.Control
             className="form-input"
@@ -193,15 +206,20 @@ function PortalForm() {
               required: <span className="required-text">Required</span>,
             })}
           />
-          </InputGroup>
-            {errors.message && errors.message.message}
+        </InputGroup>
+        {errors.message && errors.message.message}
       </Form.Group>
     
 
       <Form.Group className="Portal-text" controlId="formBasicCheckbox">
         <Form.Check
           type="checkbox"
-          label="Check me out"
+          label={
+          <>
+            I agree with the{" "}
+            <a href="https://green.filecoin.io" className='App-link'>Data Consent Clause</a>.
+          </>
+        }
           name="checkbox"
           {...register("message", {
             required: <span className="required-text">Required</span>,
