@@ -100,8 +100,8 @@
   border-radius: 1.5em 0 1.5em 0;
   background-image: linear-gradient(
     -270deg,
-    rgba(0,255, 20, 0.15),
-    green 92%,
+    rgba(0,255, 20, 0.10),
+    rgb(30, 187, 30) 92%,
     rgba(0, 255, 20, 0.05)
   );
 }
