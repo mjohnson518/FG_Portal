@@ -8,7 +8,7 @@ import './portal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
-function PG() {
+function PG2() {
   // Import the useNavigate hook from the react-router-dom library
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ function PG() {
           // Once the data has been sent to the server, update the form data in state
           setFormData(formData);
         // Use the history object to redirect the user to the next page
-        navigate('/PG2');
+        navigate('/About');
       })
       .catch((error) => {
         // If there was an error sending the data, handle it here
@@ -139,7 +139,4 @@ function PG() {
     </div>
   );
 }
-export default PG;
-
-
-
+export default PG2;
