@@ -45,11 +45,11 @@ function PG2() {
       <div className="Portal-box">
         <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}>
           <Form.Group className="Portal-text" controlId="formBasicID">
-            <Form.Label>IP Addresses: </Form.Label>
+            <Form.Label>Actual Electricity Delivered (kWh): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter IPs (seperated by commas)"
+              placeholder="Enter Actual Electricity Delivered for Reporting Period (kWh)"
               name="ipAddresses"
               autoComplete="off"
               {...register("message", {
@@ -60,11 +60,11 @@ function PG2() {
           </Form.Group>
     
           <Form.Group className="Portal-text" controlId="formBasicUtility">
-            <Form.Label>Utility Provider: </Form.Label>
+            <Form.Label>Actual Delivery (kWh): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Utility Provider"
+              placeholder="Enter Actual Delivery (kWh)"
               name="utilityProvider"
               autoComplete="off"
               {...register("message", {
@@ -75,11 +75,11 @@ function PG2() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicBillID">
-            <Form.Label>Reference / Bill ID Number: </Form.Label>
+            <Form.Label>Actual Net Power Consumed (kWh): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Ref/Bill #"
+              placeholder="Enter Actual Net Power Consumed (kWh)"
               name="referenceNumber"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
@@ -89,11 +89,11 @@ function PG2() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicEstimatedUsage">
-            <Form.Label>Estimated Annual Use (kWh): </Form.Label>
+            <Form.Label>Electricity not used to power Filecoin network (kWh): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Estimated Annual Use (kWh)"
+              placeholder="Enter Elec not used for Filecoin network (kWh)"
               name="estimatedUsage"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
@@ -101,10 +101,25 @@ function PG2() {
               />
               {errors.message && errors.message.message}
           </Form.Group>
+
+          <Form.Group className="Portal-text" controlId="formBasicEstimatedUsage">
+            <Form.Label>Estimation Methodology: </Form.Label>
+            <Form.Control
+              className="form-input"
+              type="text"
+              placeholder="Enter Estimation Methodology"
+              name="estimatedUsage"
+              {...register("message", {
+                required: <span className="required-text">* Required</span>,
+              })}
+              />
+              {errors.message && errors.message.message}
+          </Form.Group>
+
       
           <Form.Group className="Portal-text" controlId="formDocumentUpload">
             <Form.Label
-              title="Please upload the most recent three (3) months of utility bills."
+              title="Please upload any supporting documentation (e.g. metering logs, manufacturer docs)."
               onMouseEnter={(event) => {
                 event.target.style.backgroundColor = "grey";
               }}
@@ -113,7 +128,7 @@ function PG2() {
               }}
               className="info-box"
             >
-              Upload Utility Bills <FontAwesomeIcon icon={faInfoCircle} />
+              Upload Supporting Estimation Documentation <FontAwesomeIcon icon={faInfoCircle} />
             </Form.Label>
             <InputGroup>
               <Form.Control
