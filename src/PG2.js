@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form , Button, InputGroup } from 'react-bootstrap';
+import { Form , Button, InputGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
@@ -118,17 +118,17 @@ function PG2() {
 
       
           <Form.Group className="Portal-text" controlId="formDocumentUpload">
-            <Form.Label
-              title="Please upload any supporting documentation (e.g. metering logs, manufacturer docs)."
-              onMouseEnter={(event) => {
-                event.target.style.backgroundColor = "grey";
-              }}
-              onMouseLeave={(event) => {
-                event.target.style.backgroundColor = "";
-              }}
-              className="info-box"
-            >
-              Upload Supporting Estimation Documentation <FontAwesomeIcon icon={faInfoCircle} />
+            <Form.Label>
+                    Upload Estimation Documentation
+                    <OverlayTrigger placement="right" overlay={ 
+                        <Tooltip id="tooltip-right" className="info-box">
+                            Please upload any supporting documentation 
+                            (e.g. metering logs, manufacturer docs).
+                        </Tooltip>
+                        }
+                    > 
+                     <FontAwesomeIcon icon={faInfoCircle} className="fa" />
+                    </OverlayTrigger>
             </Form.Label>
             <InputGroup>
               <Form.Control

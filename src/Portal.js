@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form , Button, InputGroup } from 'react-bootstrap';
+import { Form , Button, InputGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
@@ -182,33 +182,32 @@ function PortalForm() {
       </Form.Group>
 
       <Form.Group className="Portal-text" controlId="formDocumentUpload">
-        <Form.Label
-          title="Please upload the most recent three (3) months of utility bills."
-          onMouseEnter={(event) => {
-            event.target.style.backgroundColor = "grey";
-          }}
-          onMouseLeave={(event) => {
-            event.target.style.backgroundColor = "";
-          }}
-          className="info-box"
-        >
-          Upload Utility Bills <FontAwesomeIcon icon={faInfoCircle} />
-        </Form.Label>
-        <InputGroup>
-          <Form.Control
-            className="form-input"
-            type="file"
-            accept=".pdf, .doc, .docx, .png, .jpeg"
-            multiple
-            name="upload"
-            autoComplete="off"
-            {...register("message", {
-              required: <span className="required-text">* Required</span>,
-            })}
-          />
-        </InputGroup>
-        {errors.message && errors.message.message}
-      </Form.Group>
+            <Form.Label>
+                Upload Utility Bills
+                    <OverlayTrigger placement="right" overlay={ 
+                        <Tooltip id="tooltip-right" className="info-box">
+                            Please upload the most recent three (3) months of utility bills.
+                        </Tooltip>
+                        }
+                    > 
+                     <FontAwesomeIcon icon={faInfoCircle} className="fa" />
+                    </OverlayTrigger>
+            </Form.Label>
+            <InputGroup>
+              <Form.Control
+                className="form-input"
+                type="file"
+                accept=".pdf, .doc, .docx, .png, .jpeg"
+                multiple
+                name="upload"
+                autoComplete="off"
+                {...register("message", {
+                  required: <span className="required-text">* Required</span>,
+                })}
+              />
+            </InputGroup>
+            {errors.message && errors.message.message}
+          </Form.Group>
     
 
       <Form.Group className="Portal-text" controlId="formBasicCheckbox">
