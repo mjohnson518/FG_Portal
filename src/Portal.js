@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form , Button, InputGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Form , Button, } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
 import './portal.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 function PortalForm() {
   // Import the useNavigate hook from the react-router-dom library
@@ -171,7 +170,7 @@ function PortalForm() {
         <Form.Control
           className="form-input"
           type="text"
-          placeholder="Enter Miner IDs"
+          placeholder="Enter Miner IDs (seperated by commas)"
           name="minerIds"
           autoComplete="off"
           {...register("message", {
@@ -181,31 +180,18 @@ function PortalForm() {
         {errors.message && errors.message.message}
       </Form.Group>
 
-      <Form.Group className="Portal-text" controlId="formDocumentUpload">
-            <Form.Label>
-                Upload Utility Bills
-                    <OverlayTrigger placement="right" overlay={ 
-                        <Tooltip id="tooltip-right" className="info-box">
-                            Please upload the most recent three (3) months of utility bills.
-                        </Tooltip>
-                        }
-                    > 
-                     <FontAwesomeIcon icon={faInfoCircle} className="fa" />
-                    </OverlayTrigger>
-            </Form.Label>
-            <InputGroup>
-              <Form.Control
-                className="form-input"
-                type="file"
-                accept=".pdf, .doc, .docx, .png, .jpeg"
-                multiple
-                name="upload"
-                autoComplete="off"
-                {...register("message", {
-                  required: <span className="required-text">* Required</span>,
-                })}
-              />
-            </InputGroup>
+      <Form.Group className="Portal-text" controlId="formBasicID">
+            <Form.Label>IP Addresses: </Form.Label>
+            <Form.Control
+              className="form-input"
+              type="text"
+              placeholder="Enter IPs (seperated by commas)"
+              name="ipAddresses"
+              autoComplete="off"
+              {...register("message", {
+                required: <span className="required-text">* Required</span>,
+              })}
+            />
             {errors.message && errors.message.message}
           </Form.Group>
     
