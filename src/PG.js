@@ -117,9 +117,11 @@ function PG() {
             </InputGroup>
             {errors.message && errors.message.message}
           </Form.Group>
+        </Form>
 
         <h2><u> Water Consumption </u></h2>
 
+        <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}> 
           <Form.Group className="Portal-text" controlId="formBasicUtility">
             <Form.Label>Water Utility Provider: </Form.Label>
             <Form.Control

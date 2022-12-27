@@ -7,7 +7,6 @@ import Main from "./Main"
 import PG from "./PG"
 import PG2 from "./PG2"
 import PG3 from "./PG3"
-import PG4 from "./PG4"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -24,7 +23,6 @@ function App() {
             <NavLink to="/PG" className="NavItem"><b>P1</b></NavLink>
             <NavLink to="/PG2" className="NavItem"><b>P2</b></NavLink>
             <NavLink to="/PG3" className="NavItem"><b>P3</b></NavLink>
-            <NavLink to="/PG4" className="NavItem"><b>P4</b></NavLink>
           </Nav>
         </Container>
       </Navbar>
@@ -36,7 +34,6 @@ function App() {
               <Route path="/PG" element={ <PG/> } />
               <Route path="/PG2" element={ <PG2/> } />
               <Route path="/PG3" element={ <PG3/> } />
-              <Route path="/PG4" element={ <PG4/> } />
             </Routes>
         </div> 
     </div>

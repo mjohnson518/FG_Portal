@@ -43,13 +43,13 @@ function PG3() {
         <p className="description-text"> Please submit your information below: </p>
       </div>
       <div className="Portal-box">
-      <h2><u> Renewable Energy Procured </u></h2>
+      <h2><u> Renewable Energy Produced </u></h2>
         <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}>
           <Form.Group className="Portal-text" controlId="formBasicSelect">
-                <Form.Label>Is Renewable Energy Purchased? 
+                <Form.Label>Do you generate renewable energy to power Storage Provider Operations?
                         <OverlayTrigger placement="right" overlay={ 
                             <Tooltip id="tooltip-right" className="info-box">
-                                Is renewable energy purchased and used to power the Filecoin network?
+                                Does storage provider produce solar energy used to power Filecoin IT infrastructure?
                             </Tooltip>}> 
                             <FontAwesomeIcon icon={faInfoCircle} className="fa" />
                         </OverlayTrigger>
@@ -62,27 +62,38 @@ function PG3() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicUtility">
-            <Form.Label>Renewable Energy Type </Form.Label>
+            <Form.Label>Renewable Energy Installation Date </Form.Label>
             <Form.Control
-              className="form-input"
-              type="text"
-              placeholder="Enter Renebwable Energy Type"
-              name="REType"
+              className="form-date"
+              type="date"
+              placeholder="Enter Renebwable Energy Installation Date"
+              name="REInstallationDate"
               autoComplete="off"
               {...register("message", {
-                  required: <span className="required-text">* Required</span>,
-              })}
-              />
+                  required: <span className="required-text">* Required</span>,})}/>
+              {errors.message && errors.message.message}
+          </Form.Group>
+
+          <Form.Group className="Portal-text" controlId="formBasicUtility">
+            <Form.Label>Renewable Energy Inspection Date </Form.Label>
+            <Form.Control
+              className="form-date"
+              type="date"
+              placeholder="Enter Renebwable Energy Inspection Date"
+              name="REInspectionDate"
+              autoComplete="off"
+              {...register("message", {
+                  required: <span className="required-text">* Required</span>,})}/>
               {errors.message && errors.message.message}
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formPBasicPower">
-            <Form.Label>Purchased From? </Form.Label>
+            <Form.Label>Total Solar Watt Peak (kWp): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter who the RE was purchased from"
-              name="PurchaseFrom"
+              placeholder="Enter Total Solar Watt Peak (kWp)"
+              name="TotalSolarWattPeak"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -91,12 +102,12 @@ function PG3() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicNotUsed">
-            <Form.Label>Renewable Energy Amount (kWh) </Form.Label>
+            <Form.Label>Number (#) of Solar Panels: </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Renewable Energy Amount (kWh)"
-              name="REAmount"
+              placeholder="Enter Number (#) of Solar Panels"
+              name="NumberSolarPanels"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -105,12 +116,12 @@ function PG3() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicEstimatedMeth">
-            <Form.Label>Ratio of RE to conventional sources: </Form.Label>
+            <Form.Label>Solar Panel Brand: </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Calculate the ratio of RE to conventional sources"
-              name="RERatio"
+              placeholder="Enter Solar Panel Brand"
+              name="SolarBrand"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -118,13 +129,82 @@ function PG3() {
               {errors.message && errors.message.message}
           </Form.Group>
 
+          <Form.Group className="Portal-text" controlId="formBasicEstimatedMeth">
+            <Form.Label>Solar Panel Model Number (#): </Form.Label>
+            <Form.Control
+              className="form-input"
+              type="text"
+              placeholder="Enter Solar Panel Model Number (#)"
+              name="SolarModelNumber"
+              {...register("message", {
+                required: <span className="required-text">* Required</span>,
+              })}
+              />
+              {errors.message && errors.message.message}
+          </Form.Group>
+
+          <Form.Group className="Portal-text" controlId="formBasicEstimatedMeth">
+            <Form.Label>Method of Measurement: </Form.Label>
+            <Form.Control
+              className="form-input"
+              type="text"
+              placeholder="Enter Method of Measurement"
+              name="MethodMeasurement"
+              {...register("message", {
+                required: <span className="required-text">* Required</span>,
+              })}
+              />
+              {errors.message && errors.message.message}
+          </Form.Group>
+
+          <Form.Group className="Portal-text" controlId="formBasicEstimatedMeth">
+            <Form.Label>Frequency of Measurement: </Form.Label>
+            <Form.Control
+              className="form-input"
+              type="text"
+              placeholder="Enter Frequency of Measurement"
+              name="FrequencyMeasurement"
+              {...register("message", {
+                required: <span className="required-text">* Required</span>,
+              })}
+              />
+              {errors.message && errors.message.message}
+          </Form.Group>
+        
+          <Form.Group className="Portal-text" controlId="formDocumentUpload">
+            <Form.Label>
+                    Inspection documentation / certificates
+                    <OverlayTrigger placement="right" overlay={ 
+                        <Tooltip id="tooltip-right" className="info-box">
+                            Please upload any inspection documentation or supporting certificates.
+                        </Tooltip>
+                        }
+                    > 
+                     <FontAwesomeIcon icon={faInfoCircle} className="fa" />
+                    </OverlayTrigger>
+            </Form.Label>
+            <InputGroup>
+              <Form.Control
+                className="form-input"
+                type="file"
+                accept=".pdf, .doc, .docx, .png, .jpeg"
+                multiple
+                name="upload"
+                autoComplete="off"
+                {...register("message", {
+                  required: <span className="required-text">* Required</span>,
+                })}
+              />
+            </InputGroup>
+            {errors.message && errors.message.message}
+          </Form.Group>
       
           <Form.Group className="Portal-text" controlId="formDocumentUpload">
             <Form.Label>
-                    Supporting documentation / certificates
+                Solar Panel Purchase Receipts / Documentations
                     <OverlayTrigger placement="right" overlay={ 
                         <Tooltip id="tooltip-right" className="info-box">
-                            Please upload any supporting documentation 
+                            Please upload any purchase receipts or supporting documentation 
                             (e.g. metering logs, manufacturer docs).
                         </Tooltip>
                         }
@@ -151,7 +231,7 @@ function PG3() {
         <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
         Next
         </Button>
-    </Form> 
+    </Form>
     </div>
     </div>
   );
