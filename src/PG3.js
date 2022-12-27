@@ -8,7 +8,7 @@ import './portal.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
-function PG2() {
+function PG3() {
   // Import the useNavigate hook from the react-router-dom library
   const navigate = useNavigate();
 
@@ -29,7 +29,7 @@ function PG2() {
           // Once the data has been sent to the server, update the form data in state
           setFormData(formData);
         // Use the history object to redirect the user to the next page
-        navigate('/PG3');
+        navigate('/PG4');
       })
       .catch((error) => {
         // If there was an error sending the data, handle it here
@@ -43,30 +43,31 @@ function PG2() {
         <p className="description-text"> Please submit your information below: </p>
       </div>
       <div className="Portal-box">
-      <h2><u> Electricity Consumption Continued </u></h2>
+      <h2><u> Renewable Energy Procured </u></h2>
         <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}>
-          <Form.Group className="Portal-text" controlId="formBasicID">
-            <Form.Label>Actual Electricity Delivered (kWh): </Form.Label>
-            <Form.Control
-              className="form-input"
-              type="text"
-              placeholder="Enter Actual Electricity Delivered for Reporting Period (kWh)"
-              name="ElecDelivered"
-              autoComplete="off"
-              {...register("message", {
-                required: <span className="required-text">* Required</span>,
-              })}
-            />
-            {errors.message && errors.message.message}
+          <Form.Group className="Portal-text" controlId="formBasicSelect">
+                <Form.Label>Is Renewable Energy Purchased? 
+                        <OverlayTrigger placement="right" overlay={ 
+                            <Tooltip id="tooltip-right" className="info-box">
+                                Is renewable energy purchased and used to power the Filecoin network?
+                            </Tooltip>}> 
+                            <FontAwesomeIcon icon={faInfoCircle} className="fa" />
+                        </OverlayTrigger>
+                <Form.Control as="select" name="renewableEnergyPurchased" className="drop-down" {...register("message", {
+                    required: <span className="required-text">* Required</span>, })}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </Form.Control>
+                </Form.Label>
           </Form.Group>
-    
+
           <Form.Group className="Portal-text" controlId="formBasicUtility">
-            <Form.Label>Actual Delivery (kWh): </Form.Label>
+            <Form.Label>Renewable Energy Type </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Actual Delivery (kWh)"
-              name="ActualDelivery"
+              placeholder="Enter Renebwable Energy Type"
+              name="REType"
               autoComplete="off"
               {...register("message", {
                   required: <span className="required-text">* Required</span>,
@@ -75,13 +76,13 @@ function PG2() {
               {errors.message && errors.message.message}
           </Form.Group>
 
-          <Form.Group className="Portal-text" controlId="formBasicBillID">
-            <Form.Label>Actual Net Power Consumed (kWh): </Form.Label>
+          <Form.Group className="Portal-text" controlId="formPBasicPower">
+            <Form.Label>Purchased From? </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Actual Net Power Consumed (kWh)"
-              name="ActualNetPower"
+              placeholder="Enter who the RE was purchased from"
+              name="PurchaseFrom"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -89,13 +90,13 @@ function PG2() {
               {errors.message && errors.message.message}
           </Form.Group>
 
-          <Form.Group className="Portal-text" controlId="formBasicEstimatedUsage">
-            <Form.Label>Electricity not used to power Filecoin network (kWh): </Form.Label>
+          <Form.Group className="Portal-text" controlId="formBasicNotUsed">
+            <Form.Label>Renewable Energy Amount (kWh) </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Elec not used for Filecoin network (kWh)"
-              name="ElecNotUsed"
+              placeholder="Enter Renewable Energy Amount (kWh)"
+              name="REAmount"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -103,13 +104,13 @@ function PG2() {
               {errors.message && errors.message.message}
           </Form.Group>
 
-          <Form.Group className="Portal-text" controlId="formBasicEstimatedUsage">
-            <Form.Label>Estimation Methodology: </Form.Label>
+          <Form.Group className="Portal-text" controlId="formBasicEstimatedMeth">
+            <Form.Label>Ratio of RE to conventional sources: </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Estimation Methodology"
-              name="estimatedMethodology"
+              placeholder="Calculate the ratio of RE to conventional sources"
+              name="RERatio"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
               })}
@@ -120,7 +121,7 @@ function PG2() {
       
           <Form.Group className="Portal-text" controlId="formDocumentUpload">
             <Form.Label>
-                    Upload Estimation Documentation
+                    Supporting documentation / certificates
                     <OverlayTrigger placement="right" overlay={ 
                         <Tooltip id="tooltip-right" className="info-box">
                             Please upload any supporting documentation 
@@ -155,4 +156,4 @@ function PG2() {
     </div>
   );
 }
-export default PG2;
+export default PG3;

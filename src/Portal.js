@@ -44,6 +44,7 @@ function PortalForm() {
           <p className="description-text"> Please submit your information below: </p>
       </div>
     <div className="Portal-box">
+    <h2><u> General Information </u></h2>
     <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}>
       <Form.Group className="Portal-text" controlId="formBasicSP" >
         <Form.Label>Storage Provider Name: </Form.Label>

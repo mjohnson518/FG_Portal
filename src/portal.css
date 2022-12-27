@@ -38,8 +38,15 @@
     min-height: 55vh;
     font-size: calc(10px + 1vmin);
     color: #CBD5E0;
-    overflow: auto;
-    
+    overflow: auto; 
+  }
+
+  .drop-down {
+    border-color: #182523;
+    margin: 0.2rem auto;
+    max-width: 15vw;
+    min-width: 5vw;
+    font-size: calc(8px + 1vmin);
   }
   
   .Portal-text {
@@ -60,6 +67,21 @@
     margin: 0.5rem 0 0.5rem 0;
     border: 1px solid #171923;
     border-radius: 8px;
+    max-width: 25vw;
+    padding: 0.25rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  }
+
+  .form-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 0.5rem 0 0.5rem 0;
+    border: 1px solid #171923;
+    border-radius: 8px;
+    max-width: 15vw;
     padding: 0.25rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
   }
@@ -71,7 +93,7 @@
 
   .info-box {
     content: attr(title);
-    display: block;
+    display: flex;
     position: absolute;
     flex-wrap: wrap;
     background-color: rgb(225, 225, 225);
@@ -87,7 +109,7 @@
   }
 
   .fa {
-    margin-left: 4px;
+    margin: 0 6px 0 6px;
   }
   
   @media (prefers-reduced-motion: no-preference) {

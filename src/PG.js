@@ -150,11 +150,11 @@ function PG() {
           </Form.Group>
 
           <Form.Group className="Portal-text" controlId="formBasicEstimatedUsage">
-            <Form.Label>Estimated Annual Water Use (kWh): </Form.Label>
+            <Form.Label>Estimated Annual Water Use (L): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Estimated Annual Use (kWh)"
+              placeholder="Enter Estimated Annual Use (L)"
               name="estimatedUsage"
               {...register("message", {
                 required: <span className="required-text">* Required</span>,
