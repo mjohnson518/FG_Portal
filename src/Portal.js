@@ -150,21 +150,6 @@ function PortalForm() {
         />
         {errors.message && errors.message.message}
       </Form.Group>
-      
-      <Form.Group className="Portal-text" controlId="formBasicPassword">
-        <Form.Label>Password: </Form.Label>
-        <Form.Control
-          className="form-input"
-          type="password"
-          placeholder="Password"
-          name="password"
-          autoComplete="off"
-          {...register("message", {
-            required: <span className="required-text">* Required</span>,
-          })}
-        />
-        {errors.message && errors.message.message}
-      </Form.Group>
 
       <Form.Group className="Portal-text" controlId="formBasicMiners">
         <Form.Label>MinerIDs: </Form.Label>
@@ -194,8 +179,7 @@ function PortalForm() {
               })}
             />
             {errors.message && errors.message.message}
-          </Form.Group>
-    
+      </Form.Group>
 
       <Form.Group className="Portal-text" controlId="formBasicCheckbox">
         <Form.Check
