@@ -53,7 +53,7 @@ function PG3() {
                             </Tooltip>}> 
                             <FontAwesomeIcon icon={faInfoCircle} className="fa" />
                         </OverlayTrigger>
-                <Form.Control as="select" name="renewableEnergyPurchased" className="drop-down" {...register("message", {
+                <Form.Control as="select" name="produceRenewableEnergy" className="drop-down" {...register("message", {
                     required: <span className="required-text">* Required</span>, })}>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>

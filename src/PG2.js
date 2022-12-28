@@ -61,12 +61,12 @@ function PG2() {
           </Form.Group>
     
           <Form.Group className="Portal-text" controlId="formBasicUtility">
-            <Form.Label>Actual Delivery (kWh): </Form.Label>
+            <Form.Label>Actual Returned (kWh): </Form.Label>
             <Form.Control
               className="form-input"
               type="text"
-              placeholder="Enter Actual Delivery (kWh)"
-              name="ActualDelivery"
+              placeholder="Enter Actual Returned for Reporting Period (kWh)"
+              name="ActualReturned"
               autoComplete="off"
               {...register("message", {
                   required: <span className="required-text">* Required</span>,
