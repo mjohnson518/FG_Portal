@@ -29,7 +29,7 @@ function PG3() {
           // Once the data has been sent to the server, update the form data in state
           setFormData(formData);
         // Use the history object to redirect the user to the next page
-        navigate('/PG4');
+        navigate('/About');
       })
       .catch((error) => {
         // If there was an error sending the data, handle it here
@@ -53,14 +53,14 @@ function PG3() {
                             </Tooltip>}> 
                             <FontAwesomeIcon icon={faInfoCircle} className="fa" />
                         </OverlayTrigger>
-                <Form.Control as="select" name="produceRenewableEnergy" className="drop-down" {...register("message", {
-                    required: <span className="required-text">* Required</span>, })}>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </Form.Control>
+                    <Form.Control as="select" name="produceRenewableEnergy" className="drop-down" {...register("message", {
+                        required: <span className="required-text">* Required</span>, })}>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </Form.Control>
                 </Form.Label>
-          </Form.Group>
-
+            </Form.Group>
+            
           <Form.Group className="Portal-text" controlId="formBasicUtility">
             <Form.Label>Renewable Energy Installation Date </Form.Label>
             <Form.Control

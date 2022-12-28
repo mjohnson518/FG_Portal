@@ -145,11 +145,9 @@ function PG2() {
             </InputGroup>
             {errors.message && errors.message.message}
           </Form.Group>
-        </Form> 
-
+          
     <h2><u> Renewable Energy Procured </u></h2>
 
-        <Form onSubmit={handleSubmit(onSubmit)} navigate={navigate}>    
           <Form.Group className="Portal-text" controlId="formBasicSelect">
                 <Form.Label>Is Renewable Energy Purchased? 
                         <OverlayTrigger placement="right" overlay={ 
