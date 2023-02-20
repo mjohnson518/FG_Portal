@@ -21,6 +21,7 @@ function PG2() {
 
   // Define a submit handler for the form
   const onSubmit = ({ target }) => {
+    // eslint-disable-next-line
   const { navigate } = target.props;
   
       // Use axios to send the form data object to your server
