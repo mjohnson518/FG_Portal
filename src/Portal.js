@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
 import './portal.css';
+import { Link } from 'react-router-dom';
 
 
 function PortalForm() {
@@ -197,10 +198,11 @@ function PortalForm() {
         />
         {errors.message && errors.message.message}
       </Form.Group>
-
-      <Button className="Button" variant="primary" type="submit" onSubmit={handleSubmit(onSubmit)}>
-        Next
-      </Button>
+        <Link to="/PG">   
+            <Button className="Button" variant="primary" type="submit" onSubmit={handleSubmit(onSubmit)}>
+              Next
+            </Button>
+        </Link>
       
     </Form>
     </div>

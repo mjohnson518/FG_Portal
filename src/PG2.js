@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
 import './portal.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,8 +29,6 @@ function PG2() {
         .then(() => {
           // Once the data has been sent to the server, update the form data in state
           setFormData(formData);
-        // Use the history object to redirect the user to the next page
-        navigate('/PG3');
       })
       .catch((error) => {
         // If there was an error sending the data, handle it here
@@ -249,10 +248,11 @@ function PG2() {
             </InputGroup>
             {errors.message && errors.message.message}
           </Form.Group>
-
+          <Link to="/PG3">  
             <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
             Next
             </Button>
+          </Link>
         </Form> 
     </div>
     </div>

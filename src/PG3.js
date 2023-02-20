@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './App.css';
 import './portal.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -227,10 +228,11 @@ function PG3() {
             </InputGroup>
             {errors.message && errors.message.message}
           </Form.Group>
-
-        <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
-        Next
-        </Button>
+            <Link to="/About">  
+              <Button className="Button" variant="primary" type="submit" onClick={handleSubmit}>
+              Next
+              </Button>
+            </Link>
     </Form>
     </div>
     </div>
