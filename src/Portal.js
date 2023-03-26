@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form , Button, } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
@@ -15,25 +15,14 @@ function PortalForm() {
   // Use the useForm hook from the react-hook-form library to handle form data
   const { register, handleSubmit, formState: { errors }} = useForm();
 
-  // Define a state variable to store the form data
-  const [formData, setFormData] = useState({});
-
   // Define a submit handler for the form
-  const onSubmit = ({ target }) => {
-  const { navigate } = target.props;
-
-    // Use axios to send the form data object to your server
+  const onSubmit = (data) => {
     axios
-      .post('http://localhost:3001/', formData)
+      .post('http://localhost:3001/', data)
       .then(() => {
-        // Once the data has been sent to the server, update the form data in state
-        setFormData(formData);
-
-        // Use the history object to redirect the user to the next page
         navigate('/PG');
       })
       .catch((error) => {
-        // If there was an error sending the data, handle it here
         console.error(error);
       });
   };
@@ -55,7 +44,7 @@ function PortalForm() {
           placeholder="Enter SP Name"
           name="spName"
           autoComplete="off"
-          {...register("message", {
+          {...register("spName", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -70,7 +59,7 @@ function PortalForm() {
           placeholder="Enter Country"
           name="country"
           autoComplete="off"
-          {...register("message", {
+          {...register("country", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -85,7 +74,7 @@ function PortalForm() {
           placeholder="Enter Region/State"
           name="state"
           autoComplete="off"
-          {...register("message", {
+          {...register("state", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -100,7 +89,7 @@ function PortalForm() {
           placeholder="Enter City"
           name="city"
           autoComplete="off"
-          {...register("message", {
+          {...register("city", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -115,7 +104,7 @@ function PortalForm() {
           placeholder="Enter Address"
           name="address"
           autoComplete="off"
-          {...register("message", {
+          {...register("address", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -130,7 +119,7 @@ function PortalForm() {
           placeholder="Enter Zip/Postal Code"
           name="zip"
           autoComplete="off"
-          {...register("message", {
+          {...register("zip", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -145,7 +134,7 @@ function PortalForm() {
           placeholder="Enter email"
           name="email"
           autoComplete="off"
-          {...register("message", {
+          {...register("email", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -160,7 +149,7 @@ function PortalForm() {
           placeholder="Enter Miner IDs (seperated by commas)"
           name="minerIds"
           autoComplete="off"
-          {...register("message", {
+          {...register("minerIDs", {
             required: <span className="required-text">* Required</span>,
           })}
         />
@@ -175,7 +164,7 @@ function PortalForm() {
               placeholder="Enter IPs (seperated by commas)"
               name="ipAddresses"
               autoComplete="off"
-              {...register("message", {
+              {...register("ipAddresses", {
                 required: <span className="required-text">* Required</span>,
               })}
             />
@@ -192,7 +181,7 @@ function PortalForm() {
           </>
         }
           name="checkbox"
-          {...register("message", {
+          {...register("checkbox", {
             required: <span className="required-text">* Required</span>,
           })}
         />
