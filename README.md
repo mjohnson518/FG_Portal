@@ -6,3 +6,6 @@ As stated in the [Storage Providers Green Guidance Documentation](https://fileco
 We are now building a [Reporting Portal](https://filecoin-green.gitbook.io/filecoin-green-documentation/readme-1/additional-resources/annex-3-filecoin-green-reporting-portal), which is a solution that enables easy uploading of all relevant data to substantiate the configuration and performance of SPs operations.
 
 We will update this repo periodically as we make more progress on the [Reporting Portal](https://filecoin-green.gitbook.io/filecoin-green-documentation/readme-1/additional-resources/annex-3-filecoin-green-reporting-portal).
+
+
+For updated info, please visit [Nova Energy](https://novaenergy.ai)
